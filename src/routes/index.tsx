@@ -10,7 +10,8 @@ export const Route = createFileRoute("/")({
 
 function HomePage() {
   const listings = useListings();
-  const featured = listings.slice(0, 3);
+  const featured = listings.slice(0, 6);
+  const mapSpots = listings.slice(0, 4);
 
   return (
     <main>
