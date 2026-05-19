@@ -159,7 +159,7 @@ const seed: Listing[] = [
     type: "House",
     available: true,
     description:
-      "Family vacation house on the longest beach of the Albanian Riviera. Olive groves at the back, turquoise sea at the front.",
+      "Family-friendly beach house directly on Borsh, the longest and one of the most pristine beaches of the Albanian Riviera.\n\nThree bedrooms (sleeps 6), a covered terrace shaded by olive trees, outdoor shower and BBQ. Air conditioning and a well-stocked kitchen. Bikes available for guests.\n\nThe pebble-and-sand beach with turquoise water is literally across the road. The area is famous for olive oil, citrus groves and the medieval Borsh Castle on the hill above.",
     contact: "+355 69 654 3210",
     nearSea: true,
     image:
