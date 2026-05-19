@@ -28,11 +28,12 @@ function HomePage() {
             <Sparkles className="h-3.5 w-3.5" /> AI-powered rental search
           </div>
           <h1 className="font-display text-5xl font-bold leading-tight sm:text-6xl">
-            Find your perfect stay <br /> across Albania
+            Albstays — your vacation <br /> in Albania
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-lg text-white/80">
-            From the turquoise beaches of Ksamil to the Alps of Theth — discover
-            apartments, villas and rooms with maps and a smart AI assistant.
+            From the turquoise beaches of Ksamil to the Alps of Theth — book
+            villas, apartments and cabins by the sea and the mountains, with
+            real maps and a smart AI assistant.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link to="/listings"
