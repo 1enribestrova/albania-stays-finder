@@ -14,9 +14,9 @@ export function Navbar() {
             <MapPin className="h-5 w-5" />
           </div>
           <div>
-            <div className="font-display text-lg font-bold leading-none">Stay Albania</div>
+            <div className="font-display text-lg font-bold leading-none">Albstays</div>
             <div className="text-[10px] uppercase tracking-wider text-muted-foreground">
-              Rentals & Stays
+              Albania vacation rentals
             </div>
           </div>
         </Link>

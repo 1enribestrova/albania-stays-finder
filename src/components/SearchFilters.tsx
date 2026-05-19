@@ -36,7 +36,7 @@ export function SearchFilters({
         {areas.map((a) => <option key={a} value={a}>{a}</option>)}
       </select>
       <select className={input} value={filters.type} onChange={(e) => set("type", e.target.value)}>
-        {["All", "Apartment", "House", "Studio", "Villa", "Room"].map((t) =>
+        {["All", "Apartment", "House", "Villa", "Bungalow", "Cabin", "Chalet"].map((t) =>
           <option key={t} value={t}>{t}</option>)}
       </select>
       <label className="flex flex-col text-xs text-muted-foreground">

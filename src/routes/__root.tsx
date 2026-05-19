@@ -49,8 +49,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Stay Albania — Find rentals across Albania" },
-      { name: "description", content: "Discover apartments, villas and rooms in Albania with maps and an AI assistant." },
+      { title: "Albstays — Vacation rentals across Albania" },
+      { name: "description", content: "Discover vacation apartments, villas and cabins by the sea and mountains of Albania, with maps and an AI assistant." },
     ],
     links: [{ rel: "stylesheet", href: appCss }],
   }),
