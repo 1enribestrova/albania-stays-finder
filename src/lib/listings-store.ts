@@ -126,7 +126,7 @@ const seed: Listing[] = [
     type: "Villa",
     available: true,
     description:
-      "Modern vacation villa overlooking Livadhi beach. Private pool, large terrace and a short walk to the beach.",
+      "Modern designer villa on the hills above Livadhi beach in Himarë, with floor-to-ceiling windows facing the Ionian Sea.\n\nFour en-suite bedrooms, a fully equipped kitchen, a private infinity pool and a large sun deck. Air conditioning, smart TV, fast Wi-Fi and parking for two cars.\n\nLivadhi is famous for its clean, calm waters and beachfront fish taverns — a 5-minute walk down the path. Himarë town centre and Spile beach are 4 km away.",
     contact: "+355 69 321 8888",
     nearSea: true,
     image:
