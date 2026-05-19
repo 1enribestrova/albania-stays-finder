@@ -1,4 +1,5 @@
-import { useState, type FormEvent } from "react";
+import { useState, type FormEvent, type ChangeEvent } from "react";
+import { Upload, X } from "lucide-react";
 import type { Listing } from "@/lib/listings-store";
 
 export type ListingFormValues = Omit<Listing, "id">;
@@ -29,9 +30,33 @@ export function ListingForm({
   onSubmit: (data: ListingFormValues) => void;
 }) {
   const [form, setForm] = useState<ListingFormValues>(initial ?? empty);
+  const [uploadError, setUploadError] = useState<string | null>(null);
 
   const update = <K extends keyof ListingFormValues>(k: K, v: ListingFormValues[K]) =>
     setForm((f) => ({ ...f, [k]: v }));
+
+  const handleFile = (e: ChangeEvent<HTMLInputElement>) => {
+    setUploadError(null);
+    const file = e.target.files?.[0];
+    if (!file) return;
+    if (!file.type.startsWith("image/")) {
+      setUploadError("Please choose an image file (JPG, PNG, WebP…).");
+      return;
+    }
+    // ~4MB cap to keep localStorage healthy
+    if (file.size > 4 * 1024 * 1024) {
+      setUploadError("Image is too large. Please pick a file under 4 MB.");
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = () => {
+      if (typeof reader.result === "string") update("image", reader.result);
+    };
+    reader.onerror = () => setUploadError("Could not read the selected file.");
+    reader.readAsDataURL(file);
+    // reset so selecting the same file again still triggers change
+    e.target.value = "";
+  };
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
@@ -85,10 +110,58 @@ export function ListingForm({
       </div>
 
       <div className="sm:col-span-2">
-        <label className={label}>Image URL</label>
-        <input className={input} value={form.image ?? ""} onChange={(e) => update("image", e.target.value)}
-          placeholder="https://…" />
+        <label className={label}>Property photo</label>
+        <div className="mt-1 grid gap-3 sm:grid-cols-[160px_1fr]">
+          {/* Preview */}
+          <div className="flex aspect-[4/3] items-center justify-center overflow-hidden rounded-md border border-dashed border-input bg-muted text-xs text-muted-foreground">
+            {form.image ? (
+              <img src={form.image} alt="Preview" className="h-full w-full object-cover" />
+            ) : (
+              <span>No photo yet</span>
+            )}
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <label className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-md border border-input bg-secondary px-3 py-2 text-sm font-medium hover:bg-secondary/70">
+              <Upload className="h-4 w-4" />
+              Upload from your computer
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleFile}
+                className="hidden"
+              />
+            </label>
+
+            <div className="text-center text-[11px] uppercase tracking-wider text-muted-foreground">or</div>
+
+            <input
+              className={input}
+              value={form.image?.startsWith("data:") ? "" : form.image ?? ""}
+              onChange={(e) => update("image", e.target.value)}
+              placeholder="Paste an image URL (https://…)"
+            />
+
+            {form.image && (
+              <button
+                type="button"
+                onClick={() => update("image", "")}
+                className="flex items-center justify-center gap-1 rounded-md border border-input bg-background px-3 py-1.5 text-xs text-muted-foreground hover:text-foreground"
+              >
+                <X className="h-3 w-3" /> Remove photo
+              </button>
+            )}
+
+            {uploadError && (
+              <p className="text-xs text-destructive">{uploadError}</p>
+            )}
+            <p className="text-[11px] text-muted-foreground">
+              JPG, PNG or WebP — up to 4 MB. The photo is stored locally with your listing.
+            </p>
+          </div>
+        </div>
       </div>
+
 
       <div className="sm:col-span-2">
         <label className={label}>Description</label>
