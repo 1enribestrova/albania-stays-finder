@@ -110,7 +110,7 @@ const seed: Listing[] = [
     type: "Chalet",
     available: true,
     description:
-      "Wooden chalet deep in the Valbona Valley. Surrounded by pine forests and dramatic peaks.",
+      "Traditional wooden chalet in the heart of Valbona Valley National Park, surrounded by pine forests and dramatic limestone peaks.\n\nThree bedrooms sleeping up to 7, a large fireplace, hot showers and a wraparound balcony with sunrise mountain views. Hearty breakfasts with homemade jam, byrek and mountain tea included.\n\nThe trailhead for the famous Theth–Valbona pass is a 10-minute walk away. In winter the valley turns into a snowy paradise perfect for snowshoeing.",
     contact: "+355 67 444 1212",
     nearMountain: true,
     image:
