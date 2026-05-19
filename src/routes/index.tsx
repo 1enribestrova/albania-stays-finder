@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Sparkles, MapPin, Search } from "lucide-react";
 import { useListings } from "@/hooks/use-listings";
 import { ListingCard } from "@/components/ListingCard";
+import { MapSection } from "@/components/MapSection";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
