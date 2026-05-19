@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Sparkles, MapPin, Search } from "lucide-react";
+import { useState } from "react";
 import { useListings } from "@/hooks/use-listings";
 import { ListingCard } from "@/components/ListingCard";
 import { MapSection } from "@/components/MapSection";
@@ -11,7 +12,8 @@ export const Route = createFileRoute("/")({
 function HomePage() {
   const listings = useListings();
   const featured = listings.slice(0, 6);
-  const mapSpots = listings.slice(0, 4);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const selected = listings.find((l) => l.id === selectedId) ?? listings[0];
 
   return (
     <main>
