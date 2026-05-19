@@ -1,4 +1,5 @@
-import { useState, type FormEvent } from "react";
+import { useState, type FormEvent, type ChangeEvent } from "react";
+import { Upload, X } from "lucide-react";
 import type { Listing } from "@/lib/listings-store";
 
 export type ListingFormValues = Omit<Listing, "id">;
