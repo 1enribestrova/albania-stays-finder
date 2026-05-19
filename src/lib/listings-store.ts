@@ -77,7 +77,7 @@ const seed: Listing[] = [
     type: "Bungalow",
     available: true,
     description:
-      "Cozy vacation bungalow perched above Dhërmi beach with panoramic Ionian views. Steps from beach clubs and crystal-clear coves.",
+      "Cliffside bungalow perched right above Dhërmi beach, one of the most beautiful spots on the Albanian Riviera, with uninterrupted panoramic views of the Ionian Sea.\n\nTwo bedrooms, a small kitchenette and a private terrace with hammock — perfect for sunset aperitifs. Air conditioning, hot water and Wi-Fi included.\n\nIconic beach clubs such as Folie Marine, Havana and Sunset Beach are a short walk down the path, and hidden coves like Gjipe and Jali are only minutes away by car or boat.",
     contact: "+355 68 222 4567",
     nearSea: true,
     image:
