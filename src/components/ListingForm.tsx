@@ -30,9 +30,33 @@ export function ListingForm({
   onSubmit: (data: ListingFormValues) => void;
 }) {
   const [form, setForm] = useState<ListingFormValues>(initial ?? empty);
+  const [uploadError, setUploadError] = useState<string | null>(null);
 
   const update = <K extends keyof ListingFormValues>(k: K, v: ListingFormValues[K]) =>
     setForm((f) => ({ ...f, [k]: v }));
+
+  const handleFile = (e: ChangeEvent<HTMLInputElement>) => {
+    setUploadError(null);
+    const file = e.target.files?.[0];
+    if (!file) return;
+    if (!file.type.startsWith("image/")) {
+      setUploadError("Please choose an image file (JPG, PNG, WebP…).");
+      return;
+    }
+    // ~4MB cap to keep localStorage healthy
+    if (file.size > 4 * 1024 * 1024) {
+      setUploadError("Image is too large. Please pick a file under 4 MB.");
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = () => {
+      if (typeof reader.result === "string") update("image", reader.result);
+    };
+    reader.onerror = () => setUploadError("Could not read the selected file.");
+    reader.readAsDataURL(file);
+    // reset so selecting the same file again still triggers change
+    e.target.value = "";
+  };
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
