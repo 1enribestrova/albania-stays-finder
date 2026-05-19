@@ -142,7 +142,7 @@ const seed: Listing[] = [
     type: "Cabin",
     available: true,
     description:
-      "Quiet vacation cabin inside Llogara pine forest, just 20 minutes from the Riviera beaches.",
+      "Wooden cabin hidden inside the pine forest of Llogara National Park, perched at 1,000 metres above sea level with cool air even in August.\n\nTwo bedrooms, a small kitchen, fireplace and a porch overlooking the Llogara pass — one of the most spectacular roads in Europe.\n\nThe magical bit: in just 20 minutes by car you descend to the Riviera beaches of Dhërmi and Palasa, so you can swim in the morning and sleep in the mountains. Hiking trails, paragliding launch and traditional taverns are within walking distance.",
     contact: "+355 68 909 1010",
     nearMountain: true,
     nearSea: true,
