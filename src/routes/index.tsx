@@ -52,8 +52,8 @@ function HomePage() {
       <section className="mx-auto max-w-6xl px-4 py-16">
         <div className="mb-8 flex items-end justify-between">
           <div>
-            <h2 className="font-display text-3xl font-bold">Featured stays</h2>
-            <p className="mt-1 text-muted-foreground">Hand-picked spots across Albania</p>
+            <h2 className="font-display text-3xl font-bold">Featured vacation stays</h2>
+            <p className="mt-1 text-muted-foreground">Hand-picked spots by the sea and the mountains</p>
           </div>
           <Link to="/listings" className="text-sm font-medium text-primary hover:underline">View all →</Link>
         </div>
@@ -61,6 +61,44 @@ function HomePage() {
           {featured.map((l) => <ListingCard key={l.id} listing={l} />)}
         </div>
       </section>
+
+      <section className="border-t border-border bg-secondary/30">
+        <div className="mx-auto max-w-6xl px-4 py-16">
+          <div className="mb-8">
+            <h2 className="font-display text-3xl font-bold">Where you'll stay</h2>
+            <p className="mt-1 text-muted-foreground">
+              Locations of our top vacation properties across Albania — click a card to see the full map and description.
+            </p>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2">
+            {mapSpots.map((l) => (
+              <Link
+                key={l.id}
+                to="/listings/$id"
+                params={{ id: l.id }}
+                className="group block overflow-hidden rounded-xl border border-border bg-card transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-hover)]"
+                style={{ boxShadow: "var(--shadow-card)" }}
+              >
+                <div className="flex items-start justify-between gap-3 px-4 pt-4">
+                  <div>
+                    <h3 className="font-display text-lg font-semibold group-hover:text-primary">{l.title}</h3>
+                    <div className="mt-0.5 flex items-center gap-1.5 text-xs text-muted-foreground">
+                      <MapPin className="h-3.5 w-3.5" /> {l.address}
+                    </div>
+                  </div>
+                  <div className="shrink-0 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+                    €{l.price}/night
+                  </div>
+                </div>
+                <div className="mt-3 pointer-events-none">
+                  <MapSection address={l.address} title={l.title} />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       <section className="border-t border-border bg-secondary/50">
         <div className="mx-auto grid max-w-6xl gap-8 px-4 py-16 sm:grid-cols-3">
