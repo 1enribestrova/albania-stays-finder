@@ -175,7 +175,7 @@ const seed: Listing[] = [
     type: "Villa",
     available: true,
     description:
-      "Restored Ottoman stone villa in the UNESCO city of Gjirokastër. Surrounded by mountains.",
+      "Beautifully restored 19th-century stone villa in the UNESCO-protected old bazaar of Gjirokastër, the 'City of Stone'.\n\nThree spacious bedrooms with original wooden ceilings, two bathrooms, a cozy reading nook and a small courtyard with lemon trees. Air conditioning, underfloor heating in winter and a Nespresso machine.\n\nGjirokastër Castle, the Cold War tunnel, the ethnographic museum and the famous qifqi restaurants are all within a 5-minute walk. A perfect base for exploring the Drino Valley, Blue Eye of Muzinë and Antigonea archaeological park.",
     contact: "+355 67 112 2334",
     nearMountain: true,
     nearCenter: true,
