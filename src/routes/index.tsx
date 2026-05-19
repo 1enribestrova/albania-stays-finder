@@ -72,16 +72,14 @@ function HomePage() {
           </div>
           <div className="grid gap-6 sm:grid-cols-2">
             {mapSpots.map((l) => (
-              <Link
+              <div
                 key={l.id}
-                to="/listings/$id"
-                params={{ id: l.id }}
-                className="group block overflow-hidden rounded-xl border border-border bg-card transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-hover)]"
+                className="overflow-hidden rounded-xl border border-border bg-card"
                 style={{ boxShadow: "var(--shadow-card)" }}
               >
                 <div className="flex items-start justify-between gap-3 px-4 pt-4">
                   <div>
-                    <h3 className="font-display text-lg font-semibold group-hover:text-primary">{l.title}</h3>
+                    <h3 className="font-display text-lg font-semibold">{l.title}</h3>
                     <div className="mt-0.5 flex items-center gap-1.5 text-xs text-muted-foreground">
                       <MapPin className="h-3.5 w-3.5" /> {l.address}
                     </div>
@@ -90,12 +88,22 @@ function HomePage() {
                     €{l.price}/night
                   </div>
                 </div>
-                <div className="mt-3 pointer-events-none">
+                <div className="mt-3">
                   <MapSection address={l.address} title={l.title} />
                 </div>
-              </Link>
+                <div className="flex justify-end border-t border-border px-4 py-3">
+                  <Link
+                    to="/listings/$id"
+                    params={{ id: l.id }}
+                    className="text-sm font-semibold text-primary hover:underline"
+                  >
+                    View details & description →
+                  </Link>
+                </div>
+              </div>
             ))}
           </div>
+
         </div>
       </section>
 
