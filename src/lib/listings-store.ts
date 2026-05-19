@@ -93,7 +93,7 @@ const seed: Listing[] = [
     type: "Apartment",
     available: true,
     description:
-      "Charming vacation apartment in the UNESCO Old Town of Berat. Stone walls, wooden ceilings and a view of the castle.",
+      "Charming vacation apartment inside a 200-year-old Ottoman house in the famous Mangalem quarter of Berat — the UNESCO 'City of a Thousand Windows'.\n\nTwo bedrooms, exposed stone walls, hand-carved wooden ceilings and a small balcony with a direct view of Berat Castle illuminated at night. Modern bathroom, fast Wi-Fi and a Nespresso machine.\n\nA short walk takes you to the Gorica bridge, the bazaar, wine bars and Onufri's icon museum. Surrounded by mountains and vineyards, it is also a great base for day trips to Osum Canyon.",
     contact: "+355 69 777 8899",
     nearCenter: true,
     nearMountain: true,
