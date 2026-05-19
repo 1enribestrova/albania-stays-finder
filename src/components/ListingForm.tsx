@@ -72,7 +72,7 @@ export function ListingForm({
         <label className={label}>Property type *</label>
         <select className={input} value={form.type}
           onChange={(e) => update("type", e.target.value as Listing["type"])}>
-          {["Apartment", "House", "Studio", "Villa", "Room"].map((t) => (
+          {["Apartment", "House", "Villa", "Bungalow", "Cabin", "Chalet"].map((t) => (
             <option key={t} value={t}>{t}</option>
           ))}
         </select>
