@@ -208,7 +208,7 @@ const seed: Listing[] = [
     type: "Chalet",
     available: true,
     description:
-      "Wooden chalet in the highlands above Korçë. Pine forests, frescoed churches and snowy winters.",
+      "Traditional wooden chalet in the highlands of Voskopojë, a historic mountain village above Korçë sitting at 1,160 metres.\n\nThree bedrooms, a stone fireplace in the living room, fully equipped kitchen and a large garden with mountain views. Wood heating in winter, cool breeze and shade in summer.\n\nVoskopojë is famous for its 18th-century frescoed churches, pine forests and excellent local cuisine (try the lakror pie and homemade raki). In winter the village is covered in snow, perfect for snowshoeing and quiet days by the fireplace.",
     contact: "+355 69 558 4422",
     nearMountain: true,
     image:
