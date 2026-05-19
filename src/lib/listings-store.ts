@@ -15,7 +15,7 @@ export type Listing = {
   image?: string;
 };
 
-const KEY = "albstays-vacation-v2";
+const KEY = "albstays-vacation-v3";
 
 const seed: Listing[] = [
   {
