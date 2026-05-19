@@ -61,7 +61,7 @@ const seed: Listing[] = [
     type: "House",
     available: true,
     description:
-      "Traditional stone vacation house in the Albanian Alps. Close to the Blue Eye of Theth and the Valbona trail.",
+      "Authentic stone-and-wood house deep in the Albanian Alps, surrounded by the dramatic peaks of Theth National Park.\n\nThree cozy bedrooms with handmade quilts, a wood stove in the living room and a covered porch with mountain views. Home-cooked traditional meals can be arranged with the local hosts on request.\n\nThe famous Blue Eye of Theth, the Grunas waterfall and the legendary Theth–Valbona hiking trail all start within walking distance. The perfect retreat for hikers, photographers and anyone craving silence and clean mountain air.",
     contact: "+355 67 555 7788",
     nearMountain: true,
     image:
