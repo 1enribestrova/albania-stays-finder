@@ -45,7 +45,7 @@ const seed: Listing[] = [
     type: "Villa",
     available: true,
     description:
-      "Luxury vacation villa steps from the turquoise beaches of Ksamil. Private terrace, BBQ area and direct sea views.",
+      "Luxury beachfront villa just steps from the turquoise waters of Ksamil, often called the Maldives of Europe.\n\nThe villa has 4 bedrooms, 3 bathrooms, a spacious open living area and a large terrace with sunbeds, BBQ and outdoor dining for 8. Private parking, fast Wi-Fi and air conditioning in every room.\n\nKayaks to paddle out to the Ksamil islands, beach clubs and seafood taverns are all within a 5-minute walk. A perfect summer base for families or groups of friends.",
     contact: "+355 69 999 1122",
     nearSea: true,
     image:
