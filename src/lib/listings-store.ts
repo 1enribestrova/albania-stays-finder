@@ -192,7 +192,7 @@ const seed: Listing[] = [
     type: "Apartment",
     available: true,
     description:
-      "Sunny vacation apartment by the sand dunes of Rana e Hedhun. Family-friendly beach with shallow waters.",
+      "Sunny seafront apartment right on Rana e Hedhun, the dramatic sand-dune beach of Shëngjin in northern Albania.\n\nTwo bedrooms, a modern bathroom, a kitchen with everything you need and a balcony facing the Adriatic — perfect for sunset cocktails. Air conditioning, smart TV and fast Wi-Fi.\n\nShëngjin is famous for shallow, family-friendly waters and excellent fish restaurants. Easy day trips to Lezha, Shkodra Lake and even Montenegro (45 minutes by car).",
     contact: "+355 68 770 9988",
     nearSea: true,
     image:
