@@ -28,7 +28,7 @@ const seed: Listing[] = [
     type: "Apartment",
     available: true,
     description:
-      "Bright vacation apartment with a balcony overlooking the Ionian Sea. Walking distance to the promenade, beach bars and the old port.",
+      "Bright vacation apartment on the seafront of Sarandë with a private balcony overlooking the Ionian Sea and the island of Corfu on the horizon.\n\nThe apartment features two bedrooms, a fully equipped kitchen, air conditioning and fast Wi-Fi. You are a 2-minute walk from the famous Sarandë promenade, lined with cafés, gelato shops and seafood restaurants, and only 15 minutes by car from the UNESCO archaeological park of Butrint.\n\nIdeal for couples or small families looking for a relaxed beach holiday with everything within walking distance.",
     contact: "+355 69 123 4567",
     nearSea: true,
     nearCenter: true,
